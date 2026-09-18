@@ -21,7 +21,6 @@ fetch('./mapdata.geojson').then(r=>r.json()).then(data=>{
    const p=feature.properties||{};
    const lines=[];
    if(p.name) lines.push(`<strong>${p.name}</strong>`);
-   if(p["説明・詳細（日本語）"]) {lines.push(p["説明・詳細（日本語）"]);
    if(p.category) lines.push(`カテゴリー：${p.category}`);
    if(p.address) lines.push(`住所：${p.address}`);
    if(p.description) lines.push(p.description);
